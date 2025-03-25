@@ -47,8 +47,35 @@ The goal of this challenge is to create a React and TypeScript-based application
 - **CSS** (for styling)
 - **Git & GitHub** (for version control)
 
+## How to Run
+
+1. Clone the repository:
+   
+   ```bash
+   git clone https://github.com/sherinbinny/AXA-XL-Coding-Challenge.git
+   ```
+   
+2. Navigate into the project folder:
+
+   ```bash
+   cd AXA-XL-Coding-Challenge
+   ```
+   
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the app:
+
+   ```bash
+   npm start
+   ```
+
+   
 ## Screenshots
 
-![Image 1](./Screenshots/Image1.png)
+<img src="./Screenshots/Image1.png" width="400" height="275">
 
-![Image 2](./Screenshots/Image2.png)
+<img src="./Screenshots/Image2.png" width="500" height="500">
