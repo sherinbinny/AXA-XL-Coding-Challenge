@@ -49,6 +49,6 @@ The goal of this challenge is to create a React and TypeScript-based application
 
 ## Screenshots
 
-![Image 1](./Screenshots/Image 1.png)
+![Image 1](./Screenshots/Image1.png)
 
-![Image 2](./Screenshots/Image 2.png)
+![Image 2](./Screenshots/Image2.png)
