@@ -61,23 +61,40 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
+    <div className="app-container">
       <h2>Welcome to the Greeting App!</h2>
-      <input type="text" value={input} onChange={handleInputChange} placeholder="What's your name? We's like to greet you :) " style={{ marginBottom: "30px", width: "100%", padding: "8px" }} />
-      <button onClick={handleSubmit} style={{ display: "block", width: "100%", padding: "8px" }}>Looks good!</button>
+      <input type="text" value={input} onChange={handleInputChange} placeholder="What's your name? We's like to greet you :) " className="input-field"/>
+      <button onClick={handleSubmit} className="submit-button">Looks good!</button>
 
-      {loading && <p>Loading...</p>}
-      {response && <div>{ response }</div>}
-      {error && <div style={{ color: "red" }}>Uh-oh, { error } :)</div>}
+      {loading && (
+        <div className="loading-container">
+          <span className="loading-text">Loading...</span>
+        </div>
+      )}
+      {response && <div className="response">{ response }</div>}
+      {error && <div className="error">Uh-oh, { error } :)</div>}
 
-      <h3>List of names you entered:</h3>
-      <ul>
-        {history.map((item, index) => (
-          <li key={index}>
-            <strong>Name:</strong> {item.input} | <strong>Response:</strong> {item.response}
-          </li>
-        ))}
-      </ul>
+      {history.length > 0 && (
+        <div className="history-container">
+          <h3>List of responses</h3>
+          <table className="history-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {history.map((entry, index) => (
+                <tr key={index}>
+                  <td>{index+1}</td>
+                  <td>{entry.input}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
