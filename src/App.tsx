@@ -63,7 +63,7 @@ const App = () => {
   return (
     <div className="app-container">
       <h2>Welcome to the Greeting App!</h2>
-      <input type="text" value={input} onChange={handleInputChange} placeholder="What's your name? We's like to greet you :) " className="input-field"/>
+      <input type="text" value={input} onChange={handleInputChange} placeholder="What's your name? We'd like to greet you :) " className="input-field"/>
       <button onClick={handleSubmit} className="submit-button">Looks good!</button>
 
       {loading && (
